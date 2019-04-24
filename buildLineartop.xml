@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="peer0" name="Chain Topology: Decentralized Peer-to-Peer File Sharing System">
+	<target name="peer0">
+			<exec executable="cmd" dir="./testDir/peer0">
+			<arg line="/K start cmd.exe"></arg>
+			<arg line="/K java PeerDriver  Peer0 localhost 5000 localhost 5001"></arg>
+			</exec>
+			<exec executable="cmd" dir="./testDir/peer1">
+			<arg line="/K start cmd.exe"></arg>
+			<arg line="/K java PeerDriver  Peer1 localhost 5001 localhost 5000 localhost 5002"></arg>
+			</exec>
+			<exec executable="cmd" dir="./testDir/peer2">
+			<arg line="/K start cmd.exe"></arg>
+			<arg line="/K java PeerDriver  Peer2 localhost 5002 localhost 5001 localhost 5003"></arg>
+			</exec>
+			<exec executable="cmd" dir="./testDir/peer3">
+			<arg line="/K start cmd.exe"></arg>
+			<arg line="/K java PeerDriver  Peer3 localhost 5003 localhost 5002 localhost 5004"></arg>
+			</exec>
+			<exec executable="cmd" dir="./testDir/peer4">
+			<arg line="/K start cmd.exe"></arg>
+			<arg line="/K java PeerDriver  Peer4 localhost 5004 localhost 5003 localhost 5005"></arg>
+			</exec>
+			<exec executable="cmd" dir="./testDir/peer5">
+			<arg line="/K start cmd.exe"></arg>
+			<arg line="/K java PeerDriver  Peer5 localhost 5005 localhost 5004 localhost 5006"></arg>
+			</exec>
+			<exec executable="cmd" dir="./testDir/peer6">
+			<arg line="/K start cmd.exe"></arg>
+			<arg line="/K java PeerDriver  Peer6 localhost 5006 localhost 5005 localhost 5007"></arg>
+			</exec>
+			<exec executable="cmd" dir="./testDir/peer7">
+			<arg line="/K start cmd.exe"></arg>
+			<arg line="/K java PeerDriver  Peer7 localhost 5007 localhost 5006 localhost 5008"></arg>
+			</exec>
+			<exec executable="cmd" dir="./testDir/peer8">
+			<arg line="/K start cmd.exe"></arg>
+			<arg line="/K java PeerDriver  Peer8 localhost 5008 localhost 5007 localhost 5009"></arg>
+			</exec>
+			<exec executable="cmd" dir="./testDir/peer9">
+			<arg line="/K start cmd.exe"></arg>
+			<arg line="/K java PeerDriver  Peer9 localhost 5009 localhost 5008"></arg>
+			</exec>
+	</target>
+</project>
